@@ -6,10 +6,8 @@ class Animal(Base):
     __tablename__ = "animals"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(50))
-    age = Column(Integer)
-    description = Column(String(300))
-    gender = Column(String(50))
+    # A compléter
+    photo_url = Column(String(300))
     species_id = Column(Integer, ForeignKey("species.id"))
 
     # Relation : un animal appartient à une espèce

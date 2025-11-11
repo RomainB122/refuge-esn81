@@ -11,7 +11,9 @@ dependencies = [
     "fastapi (==0.121.0)",
     "uvicorn (==0.38.0)",
     "sqlalchemy (==2.0.44)",
-    "pymysql (==1.1.2)"
+    "pymysql (==1.1.2)",
+    "alembic (>=1.17.1,<2.0.0)",
+    "fastapi-cors (>=0.0.6,<0.0.7)"
 ]
 
 [tool.poetry]

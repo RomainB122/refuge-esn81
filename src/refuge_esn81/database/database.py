@@ -2,16 +2,13 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# URL de connexion à MariaDB
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://utilisateur:motdepasse@localhost:3306/nom_de_la_base"
 
-# Crée le moteur de connexion
+SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:admin@localhost:3306/animals"
+
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
-# Crée une session locale
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
-# Base pour les modèles
 Base = declarative_base()
 
 def get_db():
