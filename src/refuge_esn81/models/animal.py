@@ -6,7 +6,7 @@ class Animal(Base):
     __tablename__ = "animals"
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(50))
+    name = Column(String(50), index=True)
     age = Column(Integer)
     description = Column(String(300))
     gender = Column(String(50))

@@ -12,6 +12,6 @@ async def get_species(db: Session = Depends(get_db)):
     return service.get_animals(db)
 
 @animalsRouter.post("/", response_model=Animal)
-def create_new_species(specie: AnimalCreate, db: Session = Depends(get_db)):
+def create_new_species(animal: AnimalCreate, db: Session = Depends(get_db)):
     service = AnimalService()
-    return service.create_animal(db, specie)
+    return service.create_animal(db, animal)
