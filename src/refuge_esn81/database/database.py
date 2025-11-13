@@ -2,8 +2,16 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
+user = "root"
+password = ""
+host = "192.168.16.67"
+port = 3306
+database = "animals"
 
-SQLALCHEMY_DATABASE_URL = "mysql+pymysql://root:admin@localhost:3306/animals"
+SQLALCHEMY_DATABASE_URL = (
+    f"mysql+pymysql://{user}:{password}@{host}:{port}/{database}"
+)
+
 
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 
