@@ -1,7 +1,7 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 class SpeciesBase(BaseModel):
-    name: str
+    name: str = Field(..., min_length=1, max_length=50)
 
 class SpeciesCreate(SpeciesBase):
     pass
@@ -11,3 +11,4 @@ class Species(SpeciesBase):
 
     class Config:
         from_attributes = True
+
