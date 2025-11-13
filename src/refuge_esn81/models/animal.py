@@ -6,7 +6,11 @@ class Animal(Base):
     __tablename__ = "animals"
 
     id = Column(Integer, primary_key=True, index=True)
-    # A compléter
+    name = Column(String(50), index=True)
+    age = Column(Integer)
+    description = Column(String(300))
+    gender = Column(String(50))
+    species = Column(String(50))
     photo_url = Column(String(300))
     species_id = Column(Integer, ForeignKey("species.id"))
 
