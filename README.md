@@ -19,6 +19,8 @@
     poetry run alembic upgrade head
 
 ## Lancement
-1 - Appuyer sur la flèche !
+1 - Démarrer le serveur de développement FastAPI
 
-2 - La doc de l'API est présente ici : http://localhost:9000/docs#
+    poetry run uvicorn refuge_esn81.main:app --reload --port 9000
+
+2 - La documentation interactive Swagger est disponible à l'adresse suivante : http://localhost:9000/docs
